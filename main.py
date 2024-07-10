@@ -39,7 +39,8 @@ class Novfensec(MDApp,App):
         return self.manager_screens
     
     def generate_application_screens(self):
-       # adds different screen widgets to the screen manager self.manager_screens.add_widget(HomeScreen(name="home screen"))
+       # adds different screen widgets to the screen manager 
+self.manager_screens.add_widget(HomeScreen(name="home screen"))
         self.manager_screens.add_widget(LoginScreen(name="login screen"))
 
 if __name__ == '__main__':
