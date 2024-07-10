@@ -29,11 +29,11 @@ class Novfensec(MDApp,App):
         self.AUTORELOADER_PATHS=[
             (".",{"recursive":True}),
         ]
+        self.theme_cls.primary_palette="Indigo"
         self.DEBUG=True
         
     def build_app(self):
         self.manager_screens=Factory.UI()
-        self.theme_cls.primary_palette="Indigo"
         self.generate_application_screens()
         self.manager_screens.current="home screen"
         return self.manager_screens
