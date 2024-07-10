@@ -8,9 +8,13 @@
             MDIconButton:
                 icon: "map-marker"
                 theme_icon_color:"Custom"
-                icon_color: app.theme_cls.primary_color
+                icon_color: app.theme_cls.primary_dark
                 on_press:
                     app.manager_screens.current="login screen"
+
+            MDLabel:
+                text: "This is home screen"
+                color:app.theme_cls.primary_dark
 
 <LoginScreen>:
     MDStackLayout:
@@ -22,10 +26,10 @@
             MDIconButton:
                 icon: "arrow-left"
                 theme_icon_color:"Custom"
-                icon_color: app.theme_cls.primary_color
+                icon_color: app.theme_cls.primary_dark
                 on_press:
                     app.manager_screens.current="home screen"
 
             MDLabel:
-                text: "this is login screen"
-                color:"red"
+                text: "This is login screen"
+                color:app.theme_cls.primary_dark
