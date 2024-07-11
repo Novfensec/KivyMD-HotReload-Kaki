@@ -19,6 +19,7 @@ class UI(Factory.ScreenManager):
 class Novfensec(MDApp,App):
     def __init__(self, *args,**kwargs):
         super(Novfensec, self).__init__(*args,**kwargs)
+        self.DEBUG=True
         self.KV_FILES={
             os.path.join(os.getcwd(),"kv_files/app.kv")
             #all kv files path here
@@ -29,8 +30,7 @@ class Novfensec(MDApp,App):
         self.AUTORELOADER_PATHS=[
             (".",{"recursive":True}),
         ]
-       self.theme_cls.primary_palette="Indigo"
-        self.DEBUG=True
+        self.theme_cls.primary_palette="Indigo"
         
     def build_app(self):
         self.manager_screens=Factory.UI()
