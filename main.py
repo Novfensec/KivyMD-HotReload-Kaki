@@ -1,8 +1,23 @@
-from kivymd.app import MDApp
-from kaki.app import App
-from kivy.factory import Factory
 import os
+from kaki.app import App
+from kivymd.app import MDApp
 from kivymd.uix.screen import MDScreen
+from kivy.factory import Factory
+from kivy.core.window import Window
+from kivy import Config
+from PIL import ImageGrab
+
+resolution = ImageGrab.grab().size
+
+# Change the values of the application window size as you need.
+Config.set("graphics", "height", "700")
+Config.set("graphics", "width", "317")
+
+
+# Place the application window on the right side of the computer screen.
+Window.top = 30
+Window.left = resolution[0] - Window.width + 5
+
 
 class HomeScreen(MDScreen):
     def __init__(self, *args,**kwargs):
