@@ -45,4 +45,39 @@ class Novfensec(MDApp,App):
 
 if __name__ == '__main__':
     Novfensec().run()
+
+'''
+For Production uncomment the below code and comment out the above code
+'''
+
+# from kivymd.app import MDApp
+# from kivymd.uix.screenmanager import MDScreenManager
+# from kivymd.uix.screen import MDScreen
+
+# class HomeScreen(MDScreen):
+#     def __init__(self, *args,**kwargs):
+#         super(HomeScreen, self).__init__(*args,**kwargs)
+
+# class LoginScreen(MDScreen):
+#     def __init__(self, *args,**kwargs):
+#         super(LoginScreen, self).__init__(*args,**kwargs)
+
+# class Novfensec(MDApp):
+#     def __init__(self, *args,**kwargs):
+#         super(Novfensec, self).__init__(*args,**kwargs)
+#         self.load_all_kv_files(self.directory)
+#         self.theme_cls.primary_palette="Indigo"
+#         self.manager_screens=MDScreenManager()
+        
+#     def build(self):
+#         self.generate_application_screens()
+#         self.manager_screens.current="home screen"
+#         return self.manager_screens
     
+#     def generate_application_screens(self):
+#        # adds different screen widgets to the screen manager 
+#         self.manager_screens.add_widget(HomeScreen(name="home screen"))
+#         self.manager_screens.add_widget(LoginScreen(name="login screen"))
+
+# if __name__ == '__main__':
+#     Novfensec().run()
