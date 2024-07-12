@@ -13,11 +13,9 @@ resolution = ImageGrab.grab().size
 Config.set("graphics", "height", "700")
 Config.set("graphics", "width", "317")
 
-
 # Place the application window on the right side of the computer screen.
 Window.top = 30
 Window.left = resolution[0] - Window.width + 5
-
 
 class HomeScreen(MDScreen):
     def __init__(self, *args,**kwargs):
