@@ -1,33 +1,40 @@
 <HomeScreen>:
-    MDStackLayout:
-        size_hint: 1, 1
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDStackLayout:
+                    size_hint: 1, 1
 
-        MDBoxLayout:
-            adaptive_height:True
-
-            MDIconButton:
-                icon: "menu"
-                theme_icon_color:"Custom"
-                icon_color: app.theme_cls.primary_dark
-
-            MDLabel:
-                text: "This is Home screen"
-                color:app.theme_cls.primary_dark
-
-            MDBoxLayout:
-                adaptive_width:True
-                MDAnchorLayout:
-                    anchor_x: 'right'
-                    MDGridLayout:
-                        rows:1
-                        adaptive_width:True
+                    MDBoxLayout:
+                        adaptive_height:True
 
                         MDIconButton:
-                            icon: "login"
+                            icon: "menu"
                             theme_icon_color:"Custom"
                             icon_color: app.theme_cls.primary_dark
                             on_press:
-                                app.manager_screens.current="login screen"
+                                nav_drawer.set_state("open")
+
+                        MDLabel:
+                            text: "This is Home screen"
+                            color:app.theme_cls.primary_dark
+
+                        MDBoxLayout:
+                            adaptive_width:True
+                            MDAnchorLayout:
+                                anchor_x: 'right'
+                                MDGridLayout:
+                                    rows:1
+                                    adaptive_width:True
+
+                                    MDIconButton:
+                                        icon: "login"
+                                        theme_icon_color:"Custom"
+                                        icon_color: app.theme_cls.primary_dark
+                                        on_press:
+                                            app.manager_screens.current="login screen"
+        ContentNavigationDrawer:
+            id:nav_drawer
 
 <LoginScreen>:
     MDStackLayout:
