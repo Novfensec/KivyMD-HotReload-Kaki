@@ -45,7 +45,7 @@ class Novfensec(MDApp,App):
         super(Novfensec, self).__init__(*args,**kwargs)
         self.DEBUG=True
         self.KV_FILES=[]
-        for file in glob.glob("./kv_files/*.kv"):
+        for file in glob.glob(f"{self.directory}/kv_files/*.kv"):
             self.KV_FILES.append(file) # load all kv file in a certain directory
         self.CLASSES={
             "UI":"main" # main file name or root file name
